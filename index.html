@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messaging App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2> Contact Us</h2>
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="mobile" placeholder="Mobile No." required>
+        <input type="text" id="subject" placeholder="Subject" required>
+        <input type="text" id="messageInput" placeholder="message" required>
+        <button id="sendButton" onclick="sendMessage()">Send</button>
+        <a href="auth.html">admin</a>
+    </div>
+    <script>
+        document.getElementById('sendButton').addEventListener('click', function(event) {
+    event.preventDefault(); 
+    
+    document.getElementById('name').value = '';
+    document.getElementById('mobile').value = '';
+    document.getElementById('subject').value = '';
+    document.getElementById('messageInput').value = '';
+    
+   
+    alert('Form sent successfully');
+});
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
